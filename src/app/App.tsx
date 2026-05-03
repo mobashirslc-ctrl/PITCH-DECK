@@ -56,12 +56,10 @@ export default function App() {
 
   // Monthly Costs Breakdown
   const monthlyCostsData = [
-    { category: 'Salaries', amount: 45 },
-    { category: 'Marketing', amount: 25 },
-    { category: 'Workspace', amount: 15 },
-    { category: 'Dev Tools', amount: 10 },
-    { category: 'Operations', amount: 5 }
-  ];
+  { name: 'Marketing', cost: 10000 }, // ৪০k থেকে কমিয়ে ১০k
+  { name: 'Dev Tools', cost: 12000 },  // ১৫k থেকে কমিয়ে ১২k (One-time)
+  { name: 'Admin/Misc', cost: 15000 },
+];
 
   // Growth Roadmap
   const growthRoadmapData = [
@@ -480,70 +478,87 @@ export default function App() {
         <div className="space-y-8">
           <h2 className="text-4xl font-bold text-blue-600 mb-6">Operating Costs Breakdown</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold mb-6 text-center">Monthly Cost Distribution</h3>
-              <ResponsiveContainer width="100%" height={350}>
-                <PieChart>
-                  <Pie
-                    data={monthlyCostsData}
-                    cx="50%"
-                    cy="50%"
-                    labelLine={false}
-                    label={({ category, amount }) => `${category}: ${amount}%`}
-                    outerRadius={120}
-                    fill="#8884d8"
-                    dataKey="amount"
-                  >
-                    {monthlyCostsData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                    ))}
-                  </Pie>
-                  <Tooltip />
-                </PieChart>
-              </ResponsiveContainer>
-            </div>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+  {/* Left Side: Summary of Contributions */}
+  <div className="space-y-6">
+    <h3 className="text-2xl font-bold mb-4">Strategic Contributions</h3>
+    
+    {/* Tech Partner Contribution */}
+    <div className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-600">
+      <div className="flex items-center space-x-4">
+        <div className="text-4xl">👨‍💻</div>
+        <div>
+          <p className="text-xl font-bold">Technical Team & Salaries</p>
+          <p className="text-sm text-gray-600">Fully Managed by Mobashir Ahmed Nasrullah</p>
+          <p className="text-lg font-bold text-blue-600 mt-1">৳0 (Partner Contribution)</p>
+        </div>
+      </div>
+    </div>
 
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold mb-6">Estimated Monthly Costs</h3>
-              {[
-                { category: 'Team Salaries', amount: '৳80,000', note: 'Investor-dependent', icon: '👥' },
-                { category: 'Digital Marketing', amount: '৳40,000', note: 'Campaigns & Ads', icon: '📢' },
-                { category: 'Workspace Rent', amount: '৳25,000', note: 'Office space', icon: '🏢' },
-                { category: 'Development Tools', amount: '৳15,000', note: 'Software & licenses', icon: '⚙️' },
-                { category: 'Operations & Misc', amount: '৳10,000', note: 'Utilities & others', icon: '💼' }
-              ].map((item, idx) => (
-                <div key={idx} className="bg-gray-50 p-5 rounded-xl border-l-4 border-blue-500">
-                  <div className="flex items-start justify-between">
-                    <div className="flex items-start space-x-3">
-                      <span className="text-3xl">{item.icon}</span>
-                      <div>
-                        <p className="text-xl font-bold">{item.category}</p>
-                        <p className="text-sm text-gray-600">{item.note}</p>
-                      </div>
-                    </div>
-                    <p className="text-xl font-bold text-blue-600">{item.amount}</p>
-                  </div>
-                </div>
-              ))}
+    {/* Investor Contribution */}
+    <div className="bg-green-50 p-6 rounded-xl border-l-4 border-green-600">
+      <div className="flex items-center space-x-4">
+        <div className="text-4xl">🏢</div>
+        <div>
+          <p className="text-xl font-bold">Office Workspace</p>
+          <p className="text-sm text-gray-600">Infrastructure provided by Investor</p>
+          <p className="text-lg font-bold text-green-600 mt-1">৳0 (In-kind Support)</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-              <div className="bg-blue-50 border-2 border-blue-400 p-5 rounded-xl mt-6">
-                <p className="text-lg font-bold text-center">Total Monthly: ৳170,000</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-orange-50 border-2 border-orange-400 p-6 rounded-xl">
-            <p className="text-lg font-bold text-orange-900">
-              ⚠️ Note: Salary structure will be finalized based on investor agreement and equity distribution
-            </p>
+  {/* Right Side: Active Monthly Investment */}
+  <div className="space-y-4">
+    <h3 className="text-2xl font-bold mb-4">Active Monthly Investment</h3>
+    
+    {/* Marketing Cost */}
+    <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-md">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center space-x-3">
+          <span className="text-3xl">📢</span>
+          <div>
+            <p className="text-xl font-bold">Digital Marketing</p>
+            <p className="text-sm text-gray-500">Ad campaigns & Lead generation</p>
           </div>
         </div>
-      )
-    },
+        <p className="text-2xl font-bold text-blue-600">৳10,000</p>
+      </div>
+    </div>
+
+    {/* Development Tools Note */}
+    <div className="bg-gray-50 p-5 rounded-xl border-l-4 border-purple-500">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center space-x-3">
+          <span className="text-3xl">⚙️</span>
+          <div>
+            <p className="text-lg font-bold">Development Tools</p>
+            <p className="text-xs text-gray-500 italic">Project-based/Occasional licenses</p>
+          </div>
+        </div>
+        <p className="font-bold text-purple-600 italic text-sm text-right">Handled as needed</p>
+      </div>
+    </div>
+
+    {/* Total Summary */}
+    <div className="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 rounded-xl text-white mt-6 shadow-lg">
+      <p className="text-lg opacity-90 text-center uppercase tracking-wider font-semibold">Total Monthly Runway</p>
+      <p className="text-5xl font-black text-center mt-1">৳10,000</p>
+    </div>
+  </div>
+</div>
+
+{/* Bottom Note */}
+<div className="bg-blue-50 border-2 border-blue-100 p-4 rounded-xl flex items-start space-x-3">
+  <span className="text-blue-600 text-xl font-bold">ℹ️</span>
+  <p className="text-gray-700 text-sm">
+    <strong>Strategic Efficiency:</strong> By utilizing existing office facilities and internal tech leadership, 
+    100% of the investor's cash contribution is channeled directly into <strong>marketing and growth</strong>.
+  </p>
+</div>
 
     // Slide 11: What Investor Gets
-    {
+    
       title: 'What Investor Receives',
       content: (
         <div className="space-y-8">
@@ -626,6 +641,12 @@ export default function App() {
               <div className="flex items-start space-x-6">
                 <div className="text-6xl">📢</div>
                 <div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            {/* Marketing Support Card */}
+            <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-8 rounded-xl border-l-4 border-blue-600">
+              <div className="flex items-start space-x-6">
+                <div className="text-6xl">📢</div>
+                <div>
                   <h3 className="text-2xl font-bold mb-3">Marketing Support</h3>
                   <ul className="space-y-2 text-lg text-gray-700">
                     <li>• Digital marketing campaigns (SEO, SEM, Social Media)</li>
@@ -633,27 +654,12 @@ export default function App() {
                     <li>• Content marketing and lead generation</li>
                     <li>• Performance marketing budget</li>
                   </ul>
-                  <p className="mt-4 text-xl font-bold text-blue-600">Estimated: ৳40,000/month</p>
+                  <p className="mt-4 text-xl font-bold text-blue-600">Estimated: ৳10,000/month</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-green-50 to-green-100 p-8 rounded-xl border-l-4 border-green-600">
-              <div className="flex items-start space-x-6">
-                <div className="text-6xl">🏢</div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-3">Workspace</h3>
-                  <ul className="space-y-2 text-lg text-gray-700">
-                    <li>• Professional office space</li>
-                    <li>• Meeting rooms and collaboration areas</li>
-                    <li>• Infrastructure and utilities</li>
-                    <li>• Conducive work environment for team</li>
-                  </ul>
-                  <p className="mt-4 text-xl font-bold text-green-600">Estimated: ৳25,000/month</p>
-                </div>
-              </div>
-            </div>
-
+            {/* Development Tools Cost Card */}
             <div className="bg-gradient-to-r from-purple-50 to-purple-100 p-8 rounded-xl border-l-4 border-purple-600">
               <div className="flex items-start space-x-6">
                 <div className="text-6xl">⚙️</div>
@@ -665,21 +671,18 @@ export default function App() {
                     <li>• Development and design tools</li>
                     <li>• API integrations and third-party services</li>
                   </ul>
-                  <p className="mt-4 text-xl font-bold text-purple-600">Estimated: ৳15,000/month</p>
+                  <p className="mt-4 text-xl font-bold text-purple-600">Estimated: ৳12,000 (One-time)</p>
                 </div>
               </div>
             </div>
           </div>
 
+          {/* Total Investment Section */}
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-2xl text-white text-center">
-            <p className="text-3xl font-bold mb-2">Total Monthly Investment Required</p>
-            <p className="text-5xl font-bold">৳80,000</p>
-            <p className="text-lg mt-3 opacity-90">(Plus team salaries based on agreement)</p>
+            <p className="text-3xl font-bold mb-2">Total Initial Investment Required</p>
+            <p className="text-5xl font-bold">৳22,000</p>
+            <p className="text-lg mt-3 opacity-90">(Includes monthly marketing and one-time tools cost)</p>
           </div>
-        </div>
-      )
-    },
-
     // Slide 13: Revenue Streams
     {
       title: 'Revenue Streams',
