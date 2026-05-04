@@ -41,24 +41,24 @@ export default function App() {
     { name: 'Support Services', value: 5 }
   ];
 
-  // Financial Projections
-  const financialProjectionsData = [
-    { month: 'M1', revenue: 50, costs: 35, profit: 15, users: 50 },
-    { month: 'M3', revenue: 150, costs: 60, profit: 90, users: 200 },
-    { month: 'M6', revenue: 350, costs: 100, profit: 250, users: 500 },
-    { month: 'M9', revenue: 600, costs: 150, profit: 450, users: 850 },
-    { month: 'M12', revenue: 900, costs: 200, profit: 700, users: 1200 },
-    { month: 'Y2', revenue: 2000, costs: 400, profit: 1600, users: 3000 },
-    { month: 'Y3', revenue: 4500, costs: 800, profit: 3700, users: 7500 }
-  ];
+  // Financial Projections (Converted to BDT in thousands)
+const financialProjectionsData = [
+  { month: 'M1', revenue: 60, costs: 40, profit: 20, users: 50 },
+  { month: 'M3', revenue: 180, costs: 70, profit: 110, users: 200 },
+  { month: 'M6', revenue: 420, costs: 120, profit: 300, users: 500 },
+  { month: 'M9', revenue: 720, costs: 180, profit: 540, users: 850 },
+  { month: 'M12', revenue: 1080, costs: 240, profit: 840, users: 1200 },
+  { month: 'Y2', revenue: 2400, costs: 480, profit: 1920, users: 3000 },
+  { month: 'Y3', revenue: 5400, costs: 960, profit: 4440, users: 7500 }
+];
 
-  // Investment Breakdown
-  const investmentBreakdownData = [
-    { category: 'Marketing Budget', amount: 45, detail: 'Paid ads, SEO, lead conversion' },
-    { category: 'Workspace & Operations', amount: 25, detail: 'Office rent & utilities' },
-    { category: 'Founder Allowance', amount: 20, detail: 'Professional dedication' },
-    { category: 'Tools & Infrastructure', amount: 10, detail: 'Cloud & subscriptions' }
-  ];
+// Investment Breakdown (Converted to BDT)
+const investmentBreakdownData = [
+  { category: 'Marketing Budget', amount: 55, detail: 'Paid ads, SEO, lead conversion' },
+  { category: 'Workspace & Operations', amount: 30, detail: 'Office rent & utilities' },
+  { category: 'Founder Allowance', amount: 25, detail: 'Professional dedication' },
+  { category: 'Tools & Infrastructure', amount: 12, detail: 'Cloud & subscriptions' }
+];
 
   // Market Opportunity Data
   const marketOpportunityData = [
@@ -120,7 +120,7 @@ export default function App() {
             </div>
             <p className="text-2xl font-semibold mb-2">Presented by</p>
             <p className="text-4xl font-bold mb-2">Mobashir Ahmed Nasrullah</p>
-            <p className="text-xl text-blue-100">Founder & Software Strategist</p>
+            <p className="text-xl text-blue-100">Tech Partner & Software Strategist</p>
           </div>
 
           <div className="flex items-center space-x-8 mt-8">
@@ -831,30 +831,36 @@ export default function App() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-green-600 to-blue-600 p-8 rounded-2xl text-white">
-            <h3 className="text-3xl font-bold mb-4">Revenue Model</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <p className="text-4xl font-bold mb-2">$50-200</p>
-                <p className="text-sm">Monthly Subscription</p>
-              </div>
-              <div className="text-center">
-                <p className="text-4xl font-bold mb-2">$500+</p>
-                <p className="text-sm">Annual Licensing</p>
-              </div>
-              <div className="text-center">
-                <p className="text-4xl font-bold mb-2">$1000+</p>
-                <p className="text-sm">Setup & Customization</p>
-              </div>
-              <div className="text-center">
-                <p className="text-4xl font-bold mb-2">$200/mo</p>
-                <p className="text-sm">Premium Support</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )
-    },
+          <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 p-8 rounded-2xl text-white shadow-xl">
+  <h3 className="text-3xl font-bold mb-8">Revenue Model</h3>
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    
+    {/* Monthly Subscription: $50-200 -> ৳6,000 - 24,000 */}
+    <div>
+      <p className="text-3xl font-extrabold mb-1">৳6k - 24k</p>
+      <p className="text-sm opacity-90 text-blue-50">Monthly Subscription</p>
+    </div>
+
+    {/* Annual Licensing: $500+ -> ৳60,000+ */}
+    <div>
+      <p className="text-3xl font-extrabold mb-1">৳60k+</p>
+      <p className="text-sm opacity-90 text-blue-50">Annual Licensing</p>
+    </div>
+
+    {/* Setup & Customization: $1000+ -> ৳1,20,000+ */}
+    <div>
+      <p className="text-3xl font-extrabold mb-1">৳1.2L+</p>
+      <p className="text-sm opacity-90 text-blue-50">Setup & Customization</p>
+    </div>
+
+    {/* Premium Support: $200/mo -> ৳24,000/mo */}
+    <div>
+      <p className="text-3xl font-extrabold mb-1">৳24k/mo</p>
+      <p className="text-sm opacity-90 text-blue-50">Premium Support</p>
+    </div>
+
+  </div>
+</div>
 
     // Slide 10: GKHIDMAH & GORUN Status
     {
@@ -1189,7 +1195,7 @@ export default function App() {
               <p className="text-gray-700 font-semibold">Verified Leads</p>
             </div>
             <div className="bg-purple-50 p-6 rounded-xl text-center">
-              <p className="text-4xl font-bold text-purple-600 mb-2">₹2.5M</p>
+              <p className="text-4xl font-bold text-purple-600 mb-2">৳3.5M</p>
               <p className="text-gray-700 font-semibold">Year 3 Revenue Target</p>
             </div>
             <div className="bg-orange-50 p-6 rounded-xl text-center">
