@@ -759,108 +759,103 @@ const investmentBreakdownData = [
 
     // Slide 9: EduStream Status
     {
-      title: 'Step 7 - Current Project Status (EduStream ERP)',
-      content: (
-        <div className="space-y-8">
-          <div className="text-center mb-12">
-            <div className="inline-block bg-green-100 px-6 py-2 rounded-full mb-4">
-              <p className="text-green-800 font-bold">STEP 7 - FLAGSHIP PRODUCT</p>
+  title: 'Step 7 - Current Project Status (EduStream ERP)',
+  content: (
+    <div className="space-y-8">
+      <div className="text-center mb-12">
+        <div className="inline-block bg-green-100 px-6 py-2 rounded-full mb-4">
+          <p className="text-green-800 font-bold">STEP 7 - FLAGSHIP PRODUCT</p>
+        </div>
+        <h2 className="text-5xl font-bold text-green-600">EduStream ERP</h2>
+        <p className="text-2xl text-gray-600 mt-4">Current Project Status</p>
+      </div>
+
+      <div className="flex items-center justify-between mb-8">
+        <div className="flex-1">
+          <h3 className="text-3xl font-bold text-blue-800 mb-2">Smart ERP for Study Abroad Agencies</h3>
+          <p className="text-xl text-gray-600">Complete solution for consultancies worldwide</p>
+        </div>
+
+        <a
+          href="https://edu-stream-erp.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-blue-600 text-white px-8 py-4 rounded-xl flex items-center space-x-3 hover:bg-blue-700 transition-all shadow-lg hover:shadow-2xl transform hover:scale-105"
+        >
+          <span className="text-xl font-bold">View Live Demo</span>
+          <ExternalLink className="w-6 h-6" />
+        </a>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl shadow-lg text-center border-2 border-green-300">
+          <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
+          <h4 className="text-2xl font-bold text-green-800 mb-2">Flagship Progress</h4>
+          <p className="text-lg text-gray-700">EduStream ERP is <span className="font-bold">ready for deployment</span> with modules for lead tracking and compliance</p>
+        </div>
+
+        <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl shadow-lg text-center border-2 border-blue-300">
+          <DollarSign className="w-16 h-16 text-blue-600 mx-auto mb-4" />
+          <h4 className="text-2xl font-bold text-blue-800 mb-2">Revenue Readiness</h4>
+          <p className="text-lg text-gray-700"><span className="font-bold">Subscription models</span> and partnership agreements are finalized</p>
+        </div>
+
+        <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl shadow-lg text-center border-2 border-purple-300">
+          <Target className="w-16 h-16 text-purple-600 mx-auto mb-4" />
+          <h4 className="text-2xl font-bold text-purple-800 mb-2">Target Market</h4>
+          <p className="text-lg text-gray-700"><span className="font-bold">1,000+</span> study abroad agencies globally</p>
+        </div>
+      </div>
+
+      <div className="bg-white p-8 rounded-2xl shadow-lg">
+        <h3 className="text-3xl font-bold mb-6">Core Modules & Features</h3>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {[
+            { icon: '👥', name: 'Student Management' },
+            { icon: '📊', name: 'Lead Tracking' },
+            { icon: '📝', name: 'Application Processing' },
+            { icon: '📁', name: 'Document Management' },
+            { icon: '🏫', name: 'University Communication' },
+            { icon: '🤝', name: 'Agent Management' },
+            { icon: '💰', name: 'Financial Reporting' },
+            { icon: '👨‍💼', name: 'Team Collaboration' },
+            { icon: '✅', name: 'Compliance Workflow' },
+            { icon: '📧', name: 'Email Automation' },
+            { icon: '📱', name: 'Mobile Access' },
+            { icon: '🔒', name: 'Security & Permissions' }
+          ].map((feature, idx) => (
+            <div key={idx} className="bg-blue-50 p-4 rounded-xl text-center hover:bg-blue-100 transition-all">
+              <div className="text-4xl mb-2">{feature.icon}</div>
+              <p className="font-semibold text-sm text-gray-800">{feature.name}</p>
             </div>
-            <h2 className="text-5xl font-bold text-green-600">EduStream ERP</h2>
-            <p className="text-2xl text-gray-600 mt-4">Current Project Status</p>
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 p-8 rounded-2xl text-white shadow-xl">
+        <h3 className="text-3xl font-bold mb-8">Revenue Model</h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <p className="text-3xl font-extrabold mb-1">৳6k - 24k</p>
+            <p className="text-sm opacity-90 text-blue-50">Monthly Subscription</p>
           </div>
-
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex-1">
-              <h3 className="text-3xl font-bold text-blue-800 mb-2">Smart ERP for Study Abroad Agencies</h3>
-              <p className="text-xl text-gray-600">Complete solution for consultancies worldwide</p>
-            </div>
-            <a
-              href="https://edu-stream-erp.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-600 text-white px-8 py-4 rounded-xl flex items-center space-x-3 hover:bg-blue-700 transition-all shadow-lg hover:shadow-2xl transform hover:scale-105"
-            >
-              <span className="text-xl font-bold">View Live Demo</span>
-              <ExternalLink className="w-6 h-6" />
-            </a>
+          <div>
+            <p className="text-3xl font-extrabold mb-1">৳60k+</p>
+            <p className="text-sm opacity-90 text-blue-50">Annual Licensing</p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl shadow-lg text-center border-2 border-green-300">
-              <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
-              <h4 className="text-2xl font-bold text-green-800 mb-2">Flagship Progress</h4>
-              <p className="text-lg text-gray-700">EduStream ERP is <span className="font-bold">ready for deployment</span> with modules for lead tracking and compliance</p>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl shadow-lg text-center border-2 border-blue-300">
-              <DollarSign className="w-16 h-16 text-blue-600 mx-auto mb-4" />
-              <h4 className="text-2xl font-bold text-blue-800 mb-2">Revenue Readiness</h4>
-              <p className="text-lg text-gray-700"><span className="font-bold">Subscription models</span> and partnership agreements are finalized</p>
-            </div>
-
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl shadow-lg text-center border-2 border-purple-300">
-              <Target className="w-16 h-16 text-purple-600 mx-auto mb-4" />
-              <h4 className="text-2xl font-bold text-purple-800 mb-2">Target Market</h4>
-              <p className="text-lg text-gray-700"><span className="font-bold">1,000+</span> study abroad agencies globally</p>
-            </div>
+          <div>
+            <p className="text-3xl font-extrabold mb-1">৳1.2L+</p>
+            <p className="text-sm opacity-90 text-blue-50">Setup & Customization</p>
           </div>
-
-          <div className="bg-white p-8 rounded-2xl shadow-lg">
-            <h3 className="text-3xl font-bold mb-6">Core Modules & Features</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {[
-                { icon: '👥', name: 'Student Management' },
-                { icon: '📊', name: 'Lead Tracking' },
-                { icon: '📝', name: 'Application Processing' },
-                { icon: '📁', name: 'Document Management' },
-                { icon: '🏫', name: 'University Communication' },
-                { icon: '🤝', name: 'Agent Management' },
-                { icon: '💰', name: 'Financial Reporting' },
-                { icon: '👨‍💼', name: 'Team Collaboration' },
-                { icon: '✅', name: 'Compliance Workflow' },
-                { icon: '📧', name: 'Email Automation' },
-                { icon: '📱', name: 'Mobile Access' },
-                { icon: '🔒', name: 'Security & Permissions' }
-              ].map((feature, idx) => (
-                <div key={idx} className="bg-blue-50 p-4 rounded-xl text-center hover:bg-blue-100 transition-all">
-                  <div className="text-4xl mb-2">{feature.icon}</div>
-                  <p className="font-semibold text-sm text-gray-800">{feature.name}</p>
-                </div>
-              ))}
-            </div>
+          <div>
+            <p className="text-3xl font-extrabold mb-1">৳24k/mo</p>
+            <p className="text-sm opacity-90 text-blue-50">Premium Support</p>
           </div>
-
-          <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 p-8 rounded-2xl text-white shadow-xl">
-  <h3 className="text-3xl font-bold mb-8">Revenue Model</h3>
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-    
-    {/* Monthly Subscription: $50-200 -> ৳6,000 - 24,000 */}
-    <div>
-      <p className="text-3xl font-extrabold mb-1">৳6k - 24k</p>
-      <p className="text-sm opacity-90 text-blue-50">Monthly Subscription</p>
-    </div>
-
-    {/* Annual Licensing: $500+ -> ৳60,000+ */}
-    <div>
-      <p className="text-3xl font-extrabold mb-1">৳60k+</p>
-      <p className="text-sm opacity-90 text-blue-50">Annual Licensing</p>
-    </div>
-
-    {/* Setup & Customization: $1000+ -> ৳1,20,000+ */}
-    <div>
-      <p className="text-3xl font-extrabold mb-1">৳1.2L+</p>
-      <p className="text-sm opacity-90 text-blue-50">Setup & Customization</p>
-    </div>
-
-    {/* Premium Support: $200/mo -> ৳24,000/mo */}
-    <div>
-      <p className="text-3xl font-extrabold mb-1">৳24k/mo</p>
-      <p className="text-sm opacity-90 text-blue-50">Premium Support</p>
-    </div>
-
-  </div>
-</div>
+        </div>
+      </div>
+    </div> // Closing main div
+  ) // Closing content parenthesis
+}, // Closing slide object
 
     // Slide 10: GKHIDMAH & GORUN Status
     {
