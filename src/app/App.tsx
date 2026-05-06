@@ -25,6 +25,7 @@ export default function App() {
 
   // Project Links
   const projectLinks = [
+    { name: 'G-MATE Ecosystem', url: 'https://g-mate-delta.vercel.app/', color: 'indigo' },
     { name: 'EduStream ERP', url: 'https://edu-stream-erp.vercel.app/', color: 'blue' },
     { name: 'GKHIDMAH Platform', url: 'https://g-khidmah.vercel.app/index.html', color: 'green' },
     { name: 'GORUN Partner Ecosystem', url: 'https://gorun-partner-ecosystem.vercel.app/expert/index.html', color: 'purple' },
