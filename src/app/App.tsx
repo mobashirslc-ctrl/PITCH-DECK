@@ -1178,6 +1178,7 @@ const investmentBreakdownData = [
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {/* Phase 1 */}
             <div className="bg-gradient-to-br from-blue-500 to-blue-700 p-8 rounded-2xl shadow-2xl text-white transform hover:scale-105 transition-all">
               <div className="text-6xl mb-4 text-center">🚀</div>
               <div className="text-center mb-6">
@@ -1202,6 +1203,7 @@ const investmentBreakdownData = [
               </ul>
             </div>
 
+            {/* Phase 2 */}
             <div className="bg-gradient-to-br from-green-500 to-green-700 p-8 rounded-2xl shadow-2xl text-white transform hover:scale-105 transition-all">
               <div className="text-6xl mb-4 text-center">📈</div>
               <div className="text-center mb-6">
@@ -1226,6 +1228,7 @@ const investmentBreakdownData = [
               </ul>
             </div>
 
+            {/* Phase 3 & 4 */}
             <div className="bg-gradient-to-br from-purple-500 to-purple-700 p-8 rounded-2xl shadow-2xl text-white transform hover:scale-105 transition-all">
               <div className="text-6xl mb-4 text-center">🌍</div>
               <div className="text-center mb-6">
@@ -1260,13 +1263,11 @@ const investmentBreakdownData = [
             <p className="text-4xl font-bold leading-relaxed mb-8">
               "We have the technology, we have the leads, and I am taking the technical risk."
             </p>
-            <p className="text-3xl font-bold">
+            <p className="text-3xl font-bold mb-8">
               Let's partner to scale these innovations into industry leaders.
             </p>
 
-          
-            {/* ⬇️ Eikhane Add Korun ⬇️ */}
-            <div className="mt-10 mb-2 flex flex-col items-center">
+            <div className="flex flex-col items-center">
               <p className="text-xl text-blue-100 mb-4 opacity-90 font-medium italic">
                 For more details on our technical expertise:
               </p>
@@ -1280,7 +1281,6 @@ const investmentBreakdownData = [
                 <ExternalLink className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
-            {/* ⬆️ End of Website Link ⬆️ */}
 
             <div className="mt-12 flex items-center justify-center space-x-8">
               <div className="text-6xl">🤝</div>
@@ -1288,12 +1288,11 @@ const investmentBreakdownData = [
               <div className="text-6xl">🚀</div>
               <div className="text-6xl">📈</div>
             </div>
-
-            
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="bg-blue-50 p-6 rounded-xl text-center">
-              <p className="text-4xl font-bold text-blue-600 mb-2">5</p>
+              <p className="text-4xl font-bold text-blue-600 mb-2">6</p>
               <p className="text-gray-700 font-semibold">Live Products</p>
             </div>
             <div className="bg-green-50 p-6 rounded-xl text-center">
@@ -1312,7 +1311,7 @@ const investmentBreakdownData = [
         </div>
       )
     }
-  ];
+  ]; // Closing for 'slides' array
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 flex flex-col">
@@ -1391,3 +1390,5 @@ const investmentBreakdownData = [
     </div>
   );
 }
+
+export default App; // Ensure this matches your component name
