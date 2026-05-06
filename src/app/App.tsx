@@ -1,6 +1,11 @@
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight, BarChart3, ExternalLink, DollarSign, TrendingUp, Users, Briefcase, Target, Zap, CheckCircle, Lightbulb } from 'lucide-react';
+import { 
+  ChevronLeft, ChevronRight, BarChart3, ExternalLink, DollarSign, 
+  TrendingUp, Users, Briefcase, Target, Zap, CheckCircle, Lightbulb, 
+  Layout 
+} from 'lucide-react';
 import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, AreaChart, Area, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts';
+
 
 const COLORS = ['#3b82f6', '#8b5cf6', '#ec4899', '#f59e0b', '#10b981', '#06b6d4', '#6366f1', '#f97316'];
 
