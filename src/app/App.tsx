@@ -25,6 +25,12 @@ export default function App() {
 
   // Project Links
   const projectLinks = [
+    { 
+    name: 'G-MATE Ecosystem', 
+    url: 'https://g-mate-delta.vercel.app/', 
+    color: 'from-indigo-600 to-blue-500', // Blank thaka bondho hobe
+    description: 'Click to view live demo →' 
+  },
     { name: 'G-MATE Ecosystem', url: 'https://g-mate-delta.vercel.app/', color: 'indigo' },
     { name: 'EduStream ERP', url: 'https://edu-stream-erp.vercel.app/', color: 'blue' },
     { name: 'GKHIDMAH Platform', url: 'https://g-khidmah.vercel.app/index.html', color: 'green' },
@@ -757,6 +763,86 @@ const investmentBreakdownData = [
         </div>
       )
     },
+
+    // Slide 8: G-MATE Ecosystem
+{
+  title: 'Step 6 - Community & Engagement (G-MATE)',
+  content: (
+    <div className="space-y-8">
+      <div className="text-center mb-12">
+        <div className="inline-block bg-indigo-100 px-6 py-2 rounded-full mb-4">
+          <p className="text-indigo-800 font-bold">STEP 6 - SOCIAL ENGINE</p>
+        </div>
+        <h2 className="text-5xl font-bold text-indigo-600">G-MATE Ecosystem</h2>
+        <p className="text-2xl text-gray-600 mt-4">The Student & Professional Community Hub</p>
+      </div>
+
+      <div className="flex items-center justify-between mb-8">
+        <div className="flex-1">
+          <h3 className="text-3xl font-bold text-indigo-800 mb-2">Empowering Student Lifestyle</h3>
+          <p className="text-xl text-gray-600">A unified social platform for commerce, networking, and support</p>
+        </div>
+
+        <a
+          href="https://g-mate-delta.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-indigo-600 text-white px-8 py-4 rounded-xl flex items-center space-x-3 hover:bg-indigo-700 transition-all shadow-lg hover:shadow-2xl transform hover:scale-105"
+        >
+          <span className="text-xl font-bold">View Live Demo</span>
+          <ExternalLink className="w-6 h-6" />
+        </a>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-xl shadow-lg text-center border-2 border-indigo-300">
+          <Users className="w-16 h-16 text-indigo-600 mx-auto mb-4" />
+          <h4 className="text-2xl font-bold text-indigo-800 mb-2">User Growth</h4>
+          <p className="text-lg text-gray-700">Central hub for <span className="font-bold">100K+ entrepreneurs</span> and student networks</p>
+        </div>
+
+        <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl shadow-lg text-center border-2 border-purple-300">
+          <Layout className="w-16 h-16 text-purple-600 mx-auto mb-4" />
+          <h4 className="text-2xl font-bold text-purple-800 mb-2">Engagement</h4>
+          <p className="text-lg text-gray-700">Multi-feature platform ensuring <span className="font-bold">high daily active users</span> (DAU)</p>
+        </div>
+
+        <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl shadow-lg text-center border-2 border-blue-300">
+          <Zap className="w-16 h-16 text-blue-600 mx-auto mb-4" />
+          <h4 className="text-2xl font-bold text-blue-800 mb-2">Synergy</h4>
+          <p className="text-lg text-gray-700">Drives users to <span className="font-bold">EduStream & GKHIDMAH</span> via cross-promotion</p>
+        </div>
+      </div>
+
+      <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+        <h3 className="text-3xl font-bold mb-6 text-gray-800">Key G-MATE Features</h3>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+          {[
+            { icon: '📚', name: 'Academic Marketplace', desc: 'Buy/sell lecture notes & guides' },
+            { icon: '🍳', name: 'Student Chefs', desc: 'Order home-cooked meals' },
+            { icon: '❤️', name: 'Mental Health', desc: 'Anonymous peer support' },
+            { icon: '🛡️', name: 'SOS Emergency', desc: 'Instant safety alerts' },
+            { icon: '💼', name: 'Part-time Jobs', desc: 'Student-specific job boards' },
+            { icon: '🎁', name: 'Student Privileges', desc: 'Exclusive digital discounts' },
+            { icon: '🏠', name: 'Rental Service', desc: 'Peer-to-peer essentials' },
+            { icon: '👥', name: 'Group Shopping', desc: 'Split costs & bulk deals' },
+            { icon: '🎟️', name: 'Ticket Exchange', desc: 'P2P bus/train tickets' }
+          ].map((feature, idx) => (
+            <div 
+              key={idx} 
+              onClick={() => window.open('https://g-mate-delta.vercel.app/', '_blank')}
+              className="group bg-gradient-to-r from-gray-50 to-white p-5 rounded-2xl border border-gray-200 hover:border-indigo-400 hover:shadow-md transition-all cursor-pointer"
+            >
+              <div className="text-4xl mb-3 transform group-hover:scale-110 transition-transform">{feature.icon}</div>
+              <p className="font-bold text-lg text-indigo-900">{feature.name}</p>
+              <p className="text-sm text-gray-600 mt-1">{feature.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+},
 
     // Slide 9: EduStream Status
     {
