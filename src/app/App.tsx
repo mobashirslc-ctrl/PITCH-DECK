@@ -1264,13 +1264,32 @@ const investmentBreakdownData = [
               Let's partner to scale these innovations into industry leaders.
             </p>
 
+          
+            {/* ⬇️ Eikhane Add Korun ⬇️ */}
+            <div className="mt-10 mb-2 flex flex-col items-center">
+              <p className="text-xl text-blue-100 mb-4 opacity-90 font-medium italic">
+                For more details on our technical expertise:
+              </p>
+              <a 
+                href="https://gtech-gtny.vercel.app/#home" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white text-blue-600 px-10 py-4 rounded-2xl font-bold text-2xl hover:bg-blue-50 transition-all shadow-xl flex items-center space-x-3 group"
+              >
+                <span>Visit G-Tech Official Website</span>
+                <ExternalLink className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+            {/* ⬆️ End of Website Link ⬆️ */}
+
             <div className="mt-12 flex items-center justify-center space-x-8">
               <div className="text-6xl">🤝</div>
               <div className="text-6xl">💡</div>
               <div className="text-6xl">🚀</div>
               <div className="text-6xl">📈</div>
             </div>
-          </div>
+
+            
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="bg-blue-50 p-6 rounded-xl text-center">
