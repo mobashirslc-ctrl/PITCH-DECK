@@ -1395,4 +1395,3 @@ const investmentBreakdownData = [
   );
 }
 
-export default App;
