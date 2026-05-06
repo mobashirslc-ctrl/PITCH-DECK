@@ -1167,6 +1167,8 @@ const investmentBreakdownData = [
       )
     },
 
+    // ... (Ager slides gulo ekhane thakbe)
+
     // Slide 12: Conclusion & Roadmap
     {
       title: 'Conclusion & Strategic Roadmap',
@@ -1311,8 +1313,9 @@ const investmentBreakdownData = [
         </div>
       )
     }
-  ]; // Closing for 'slides' array
+  ]; // Slides array end
 
+  // UI Logic
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 flex flex-col">
       <div className="bg-white shadow-md py-4 px-8 flex items-center justify-between border-b-2 border-blue-200">
@@ -1343,6 +1346,7 @@ const investmentBreakdownData = [
         </div>
       </div>
 
+      {/* Navigation Controls */}
       <div className="bg-white border-t-2 border-blue-200 py-6 px-8 shadow-lg">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <button
@@ -1391,4 +1395,4 @@ const investmentBreakdownData = [
   );
 }
 
-export default App; // Ensure this matches your component name
+export default App;
