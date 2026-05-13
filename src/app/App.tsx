@@ -370,6 +370,51 @@ const investmentBreakdownData = [
         </div>
       )
     },
+    2. NEW: G-Tech Core Pillars (Pillar 1, 2, 3)
+    {
+      title: 'Business Pillars',
+      content: (
+        <div className="space-y-6">
+          <h2 className="text-4xl font-bold text-blue-800 border-b-4 border-blue-200 pb-2">Business Pillars</h2>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="p-6 bg-blue-50 rounded-2xl shadow-sm border border-blue-100">
+              <h3 className="font-bold text-blue-900 text-xl mb-2">1. Custom Dev</h3>
+              <p className="text-sm">Upwork (Global) & Digital Marketing (Local)</p>
+            </div>
+            <div className="p-6 bg-purple-50 rounded-2xl shadow-sm border border-purple-100">
+              <h3 className="font-bold text-purple-900 text-xl mb-2">2. SaaS ERP</h3>
+              <p className="text-sm">Abroad Agency Solution via Telemarketing</p>
+            </div>
+            <div className="p-6 bg-orange-50 rounded-2xl shadow-sm border border-orange-100">
+              <h3 className="font-bold text-orange-900 text-xl mb-2">3. Startups</h3>
+              <p className="text-sm">G-Mate (Campus) & G-Next (80k Leads)</p>
+            </div>
+          </div>
+        </div>
+      )
+    },
+
+    // 3. NEW: Marketing Strategy (Local & Global)
+    {
+      title: 'Marketing Plan',
+      content: (
+        <div className="grid grid-cols-2 gap-8">
+          <div className="bg-white p-6 rounded-xl border-l-8 border-blue-600 shadow-lg">
+            <h3 className="text-2xl font-bold mb-4 flex items-center gap-2"><Megaphone className="text-blue-600" /> Digital Marketing</h3>
+            <ul className="space-y-2 text-gray-700">
+              <li>• Targeted FB/IG Video Ads</li>
+              <li>• Google Search Optimization (SEO)</li>
+              <li>• Explainer content for local businesses</li>
+            </ul>
+          </div>
+          <div className="bg-white p-6 rounded-xl border-l-8 border-purple-600 shadow-lg">
+            <h3 className="text-2xl font-bold mb-4 flex items-center gap-2"><PhoneCall className="text-purple-600" /> Telemarketing</h3>
+            <p className="text-gray-700 mb-4">Focusing on Subscription SaaS closing.</p>
+            <div className="bg-purple-100 p-3 rounded-lg font-bold text-purple-800">Available: 80K+ Verified Leads</div>
+          </div>
+        </div>
+      )
+    },
 
     // Slide 5: Investment Model
     {
@@ -848,7 +893,29 @@ const investmentBreakdownData = [
     </div>
   )
 },
-
+// 4. NEW: G-Mate Roadmap
+    {
+      title: 'G-Mate Campus Roadmap',
+      content: (
+        <div className="space-y-8">
+          <h2 className="text-4xl font-bold text-indigo-900">G-Mate Campus Growth</h2>
+          <div className="flex justify-between items-center gap-4">
+             <div className="flex-1 bg-white p-6 rounded-xl border-2 border-indigo-500 shadow-md">
+                <div className="text-2xl font-bold text-indigo-600">Phase 1</div>
+                <p className="font-bold">University Ambassadors</p>
+             </div>
+             <div className="flex-1 bg-white p-6 rounded-xl border-2 border-blue-500 shadow-md">
+                <div className="text-2xl font-bold text-blue-600">Phase 2</div>
+                <p className="font-bold">Digital Campaigns</p>
+             </div>
+             <div className="flex-1 bg-white p-6 rounded-xl border-2 border-orange-500 shadow-md">
+                <div className="text-2xl font-bold text-orange-600">Phase 3</div>
+                <p className="font-bold">Campus Bootcamps</p>
+             </div>
+          </div>
+        </div>
+      )
+    },
     // Slide 9: EduStream Status
     {
   title: 'Step 7 - Current Project Status (EduStream ERP)',
