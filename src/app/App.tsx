@@ -370,7 +370,7 @@ const investmentBreakdownData = [
         </div>
       )
     },
-    //2. NEW: G-Tech Core Pillars (Pillar 1, 2, 3)
+    
     {
       title: 'Business Pillars',
       content: (
