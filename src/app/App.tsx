@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { 
   ChevronLeft, ChevronRight, BarChart3, ExternalLink, DollarSign, 
   TrendingUp, Users, Briefcase, Target, Zap, CheckCircle, Lightbulb, 
-  Layout 
+  Layout, Megaphone, PhoneCall 
 } from 'lucide-react';
 import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, AreaChart, Area, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts';
 
